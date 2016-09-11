@@ -11,7 +11,8 @@ body {
   font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   line-height: 1.6;
   letter-spacing: 0.1em;
-  background-color: #EDEEF0; }
+  background-color: #EDEEF0;
+  box-sizing: border-box; }
 
 a {
   color: #403B87;
@@ -48,7 +49,11 @@ section {
 
 #header-photo {
   width: 100%;
-  padding: 0; }
+  padding: 0;
+  height: 250px;
+  background-image: url("../images/img-yokohama-night2.jpg");
+  background-size: cover;
+  background-position: 50% 50%; }
   #header-photo img {
     max-width: 100%;
     max-height: 500px; }
@@ -62,7 +67,8 @@ section {
   margin-bottom: 30px; }
 #details .details-box {
   margin: 10px 0;
-  padding: 0; }
+  padding: 0;
+  order: solid 1px; }
 #details .details-box-inner-title {
   background-color: #403B87;
   color: #FFDEBD;
@@ -77,7 +83,8 @@ section {
   font-size: 1.5rem; }
 
 #button-area {
-  background: #7ABEFF; }
+  background: #7ABEFF;
+  margin-top: 50px; }
   #button-area div {
     margin: 20px 0; }
   #button-area a {
@@ -94,14 +101,25 @@ section {
   a:hover {
     text-decoration: underline; }
 
+  #header-photo {
+    height: 500px; }
+
   #details .container {
     -webkit-flex-direction: row;
     flex-direction: row;
-    justify-content: space-between; }
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0;
+    margin-left: auto;
+    margin-right: auto; }
   #details .details-box {
-    margin: 0 10px; }
-
-  #details .details-box {
-    width: 33.33333%; } }
+    margin: 0 0px;
+    padding: 0px 0px;
+    width: 32.33333%;
+    float: left;
+    background-color: #7ABEFF; }
+  #details .details-box-inner-title {
+    margin: 0 0px; } }
 
 /*# sourceMappingURL=style.css.map */
