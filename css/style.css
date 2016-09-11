@@ -67,8 +67,7 @@ section {
   margin-bottom: 30px; }
 #details .details-box {
   margin: 10px 0;
-  padding: 0;
-  order: solid 1px; }
+  padding: 0; }
 #details .details-box-inner-title {
   background-color: #403B87;
   color: #FFDEBD;
