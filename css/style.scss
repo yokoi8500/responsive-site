@@ -1,0 +1,152 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #EDEEF0;//#7ABEFF;//#EDEEF0;
+$subColor:  #7ABEFF;//#7492F3;
+$keyColor: #403B87;
+$fontColor1: #2B2B30;
+$fontColor2: #FFDEBD;
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor1;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em;
+  background-color: $baseColor;
+}
+
+a {
+  @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+  text-decoration: none;
+}
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Contents
+------------------------------------------------------------*/
+// Common Styles
+section {
+  padding: 10px 0;
+  .container {
+    width: 90%;
+    @extend .block-center;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+  }
+}
+
+
+//header-photo
+#header-photo {
+  width: 100%;
+  padding: 0;
+  img {
+    max-width: 100%;
+    max-height: 500px;
+    @extend .block-center;
+    }
+  }
+// details
+#details {
+  //background-color: $subColor;
+  .container {
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column);
+    //background-color: #ffa;//$subColor;
+    margin-bottom:30px;
+  }
+  .details-box {
+    //@include flex(1);
+    margin: 10px 0;
+     padding: 0;
+    //border:solid 1px;
+    //background-color: #f00;//$baseColor;
+  }
+  
+  .details-box-inner-title {
+    background-color: $keyColor;
+    color: $fontColor2;
+    padding: 20px 10px;
+    margin-bottom: 0px;
+    font-size: 1.7rem;
+  }
+  .details-box-inner-text {
+    background-color: $subColor;
+    padding: 20px 10px;
+    color: $keyColor;
+    margin-bottom:0;
+    font-size: 1.5rem;
+  }
+}
+
+// button-area
+#button-area{
+  background:$subColor;
+  div{
+    margin: 20px 0;
+  }
+  a{
+    background:$keyColor;
+    color: $fontColor2;
+    padding: 5px 50px;
+    @include border-radius(7px);
+  }
+}
+
+// PC
+@media (min-width: 769px) {
+  /* Base
+  ------------------------------------------------------------*/
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // details
+  #details {
+    .container {
+      @include flex-direction(row);
+      justify-content: space-between;
+    }
+    .details-box {
+      margin: 0 10px;
+    }
+  }
+  
+  // details
+  #details {
+    .details-box {
+      width: (100% / 3);
+    }
+  }
+  
+  
+}
+
