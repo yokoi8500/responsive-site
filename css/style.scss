@@ -97,9 +97,17 @@ section {
   .details-box-inner-title {
     background-color: $keyColor;
     color: $fontColor2;
-    padding: 20px 10px;
+    padding: 5px 10px;
     margin-bottom: 0px;
     font-size: 1.7rem;
+    min-height:60px;      //最低、2行分の高さにするために設定
+
+    // 参考  http://blog.e-riverstyle.com/2013/11/flexboxmixinsass.html
+	  @include display-flex();
+	  @include flex-direction(row);
+	  @include justify-content(center); // 横方向中央揃え
+	  @include align-items(center);     // 縦方向中央揃え
+
   }
   .details-box-inner-text {
     background-color: $subColor;

@@ -71,9 +71,18 @@ section {
 #details .details-box-inner-title {
   background-color: #403B87;
   color: #FFDEBD;
-  padding: 20px 10px;
+  padding: 5px 10px;
   margin-bottom: 0px;
-  font-size: 1.7rem; }
+  font-size: 1.7rem;
+  min-height: 60px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center; }
 #details .details-box-inner-text {
   background-color: #7ABEFF;
   padding: 20px 10px;
